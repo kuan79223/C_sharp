@@ -6,15 +6,15 @@ namespace DelegateApp1
     {
         static FileStream fs;
         static StreamWriter sw;
-        //委託聲明
+        // 委託聲明
         public delegate void printString(string s);
-
-        //將方法輸出在 console
+        
+        // 輸出在console
         public static void WriteToScreen(string str)
         {
             Console.WriteLine("The string is: {0}", str);
         }
-        //將方法寫入文件
+        // 寫入文件
         public static void WriteToFile(string s)
         {
             fs = new FileStream("d:\\message.txt",FileMode.Append, FileAccess.Write);
@@ -29,6 +29,9 @@ namespace DelegateApp1
         {
             ps("hello world");
         }
+        
+        
+        
         static void Main(string[] args)
         {
             printString ps1 = new printString(WriteToScreen);
