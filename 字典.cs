@@ -13,6 +13,9 @@ dict["third"] = 3;
 
 Console.WriteLine(string.Join("; ",dict.Select(entry => $"{entry.Key}: {entry.Value}")));
 
+//輸出 first: 1; second: 2; third: 3
+
+
 //使用物件或集合初始設定式，用大括號在單一陳述式中具現化和初始化物件:
 
 var dict1 = new Dictionary<string, int>()
@@ -22,6 +25,8 @@ var dict1 = new Dictionary<string, int>()
 };
 
 Console.WriteLine(string.Join("; ",dict1.Select(entry=>$"{entry.Key}: {entry.Value}")));
+
+//輸出 first: 10; second: 20; third: 30
 
 
 List<int> xs = new();
@@ -36,3 +41,7 @@ Dictionary<int, List<int>> lookup = new()
 };
 
 Console.WriteLine(string.Join("; ", lookup.Select(entry => $"{entry.Key}: {entry.Value}")));
+
+//輸出 1: System.Collections.Generic.List`1[System.Int32]; 
+//     2: System.Collections.Generic.List`1[System.Int32]; 
+//     5: System.Collections.Generic.List`1[System.Int32]
